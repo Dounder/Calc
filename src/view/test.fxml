@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="424.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TestController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="72.0" layoutY="237.0" mnemonicParsing="false" onAction="#add" prefHeight="28.0" prefWidth="161.0" text="Suma" />
+      <Button fx:id="btnSubstraction" layoutX="72.0" layoutY="274.0" mnemonicParsing="false" onAction="#subtract" prefHeight="28.0" prefWidth="161.0" text="Resta" />
+      <TextField fx:id="firstNum" layoutX="18.0" layoutY="82.0" prefHeight="28.0" prefWidth="268.0" promptText="Primer número" />
+      <TextField fx:id="secondNum" layoutX="18.0" layoutY="132.0" prefHeight="16.0" prefWidth="268.0" promptText="Segundo número" />
+      <Text layoutX="18.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operaciones Aritmética con dos números" textAlignment="CENTER" wrappingWidth="268.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnDivision" layoutX="72.0" layoutY="355.0" mnemonicParsing="false" onAction="#divide" prefHeight="28.0" prefWidth="161.0" text="División" />
+      <Button fx:id="btnMultiplication" layoutX="72.0" layoutY="314.0" mnemonicParsing="false" onAction="#multiply" prefHeight="28.0" prefWidth="161.0" text="Multiplicación" />
+      <TextField fx:id="result" editable="false" layoutX="18.0" layoutY="178.0" prefHeight="16.0" prefWidth="268.0" promptText="Resultado" />
+   </children>
+</AnchorPane>
