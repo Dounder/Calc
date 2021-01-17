@@ -10,6 +10,10 @@ public class Multiply {
         this.secondNum = secondNum;
     }
 
+    public Multiply() {
+
+    }
+
     public Integer getFirsNum() {
         return firsNum;
     }
@@ -26,7 +30,7 @@ public class Multiply {
         this.secondNum = secondNum;
     }
 
-    public Integer multiplyNum(){
+    public static Integer multiplyNum(Integer firsNum, Integer secondNum){
         return firsNum * secondNum;
     }
 

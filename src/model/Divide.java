@@ -26,7 +26,7 @@ public class Divide {
         this.secondNum = secondNum;
     }
 
-    public Integer divideNum(){
+    public static Integer divideNum(Integer firsNum, Integer secondNum){
         return firsNum / secondNum;
     }
 

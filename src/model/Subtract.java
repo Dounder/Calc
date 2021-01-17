@@ -26,7 +26,7 @@ public class Subtract {
         this.secondNum = secondNum;
     }
 
-    public Integer subtractNum(){
+    public static Integer subtractNum(Integer firsNum, Integer secondNum){
         return firsNum - secondNum;
     }
 }

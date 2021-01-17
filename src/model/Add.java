@@ -10,6 +10,9 @@ public class Add {
         this.secondNum = secondNum;
     }
 
+    public Add() {
+    }
+
     public Integer getFirstNum() {
         return firstNum;
     }
@@ -26,8 +29,8 @@ public class Add {
         this.secondNum = secondNum;
     }
 
-    public Integer addNum(){
-        return  firstNum + secondNum;
+    public static Integer addNum(Integer firstNum, Integer secondNum){
+         return firstNum + secondNum;
     }
 
 }
