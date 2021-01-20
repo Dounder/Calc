@@ -2,10 +2,10 @@ package model;
 
 public class Add {
 
-    private Integer firstNum;
-    private Integer secondNum;
+    private Double firstNum;
+    private Double secondNum;
 
-    public Add(Integer firstNum, Integer secondNum) {
+    public Add(Double firstNum, Double secondNum) {
         this.firstNum = firstNum;
         this.secondNum = secondNum;
     }
@@ -13,23 +13,23 @@ public class Add {
     public Add() {
     }
 
-    public Integer getFirstNum() {
+    public Double getFirstNum() {
         return firstNum;
     }
 
-    public void setFirstNum(Integer firstNum) {
+    public void setFirstNum(Double firstNum) {
         this.firstNum = firstNum;
     }
 
-    public Integer getSecondNum() {
+    public Double getSecondNum() {
         return secondNum;
     }
 
-    public void setSecondNum(Integer secondNum) {
+    public void setSecondNum(Double secondNum) {
         this.secondNum = secondNum;
     }
 
-    public static Integer addNum(Integer firstNum, Integer secondNum){
+    public static Double addNum(Double firstNum, Double secondNum){
          return firstNum + secondNum;
     }
 

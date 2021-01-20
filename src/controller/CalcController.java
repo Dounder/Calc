@@ -65,10 +65,10 @@ public class CalcController {
     @FXML
     private Button five;
 
-    private Integer operator;
-    private Integer num1;
-    private Integer num2;
-    private Integer r;
+    private String operator;
+    private Double num1;
+    private Double num2;
+    private Double r;
 
     //Métodos relacionados a los botones de la interfaz para hacer la operaciones aritméticas
     @FXML
@@ -79,53 +79,66 @@ public class CalcController {
     @FXML
     void addNumber(ActionEvent event) {
 
-        this.operator = 1;
-        this.num1 = Integer.parseInt(this.display.getText());
+        this.operator = "+";
+        this.num1 = Double.parseDouble(this.display.getText());
         this.display.setText("");
     }
 
     @FXML
     void subtractNum(ActionEvent event) {
-        this.num1 = Integer.parseInt(this.display.getText());
-        this.operator = 2;
+        this.num1 = Double.parseDouble(this.display.getText());
+        this.operator = "-";
         this.display.setText("");
     }
 
     @FXML
     void multiplyNum(ActionEvent event) {
 
-        this.num1 = Integer.parseInt(this.display.getText());
-        this.operator = 3;
+        this.num1 = Double.parseDouble(this.display.getText());
+        this.operator = "*";
         this.display.setText("");
     }
 
     @FXML
     void divideNum(ActionEvent event) {
-        this.num1 = Integer.parseInt(this.display.getText());
-        this.operator = 4;
+        this.num1 = Double.parseDouble(this.display.getText());
+        this.operator = "/";
         this.display.setText("");
     }
 
     @FXML
     void displayResult(ActionEvent event) {
 
-        this.num2 = Integer.parseInt(this.display.getText());
+        this.num2 = Double.parseDouble(this.display.getText());
 
-        if (this.operator == 1){
-            this.r = Add.addNum(this.num1, this.num2);
+        switch (this.operator){
+            case "+":
+                this.display.setText(noZero(this.num1+this.num2));
+                break;
+            case "-":
+                this.display.setText(noZero(this.num1-this.num2));
+                break;
+            case "*":
+                this.display.setText(noZero(this.num1*this.num2));
+                break;
+            case "/":
+                if (this.num2 == 0) this.display.setText("NOT DIVISIBLE BY ZERO");
+                else this.display.setText(noZero(this.num1/this.num2));
+                break;
+            default:
+                System.out.println("ERROR");
+                break;
         }
-        if (this.operator == 2){
-            this.r = Subtract.subtractNum(this.num1, this.num2);
-        }
-        if (this.operator == 3){
-            this.r = Multiply.multiplyNum(this.num1, this.num2);
-        }
-        if (this.operator == 4){
-            this.r = Divide.divideNum(this.num1, this.num2);
-        }
+    }
 
-        this.display.setText(Integer.toString(r));
+    //Método para dar formato a los números de display
+    public String noZero(Double result){
 
+        String r = Double.toString(result);
+
+        if (result % 1 == 0) r = r.substring(0, r.length()-2);
+
+        return r;
     }
 
     //Métodos para agregar los números en el display
@@ -195,7 +208,7 @@ public class CalcController {
 
     @FXML
     void addDot(ActionEvent event) {
-        this.display.setText(this.display.getText() + ".");
+        if (!(this.display.getText().contains("."))) this.display.setText(this.display.getText() + ".");
     }
 
 }

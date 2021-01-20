@@ -2,31 +2,31 @@ package model;
 
 public class Divide {
 
-    private Integer firsNum;
-    private Integer secondNum;
+    private Double firsNum;
+    private Double secondNum;
 
-    public Divide(Integer firsNum, Integer secondNum) {
+    public Divide(Double firsNum, Double secondNum) {
         this.firsNum = firsNum;
         this.secondNum = secondNum;
     }
 
-    public Integer getFirsNum() {
+    public Double getFirsNum() {
         return firsNum;
     }
 
-    public void setFirsNum(Integer firsNum) {
+    public void setFirsNum(Double firsNum) {
         this.firsNum = firsNum;
     }
 
-    public Integer getSecondNum() {
+    public Double getSecondNum() {
         return secondNum;
     }
 
-    public void setSecondNum(Integer secondNum) {
+    public void setSecondNum(Double secondNum) {
         this.secondNum = secondNum;
     }
 
-    public static Integer divideNum(Integer firsNum, Integer secondNum){
+    public static Double divideNum(Double firsNum, Double secondNum){
         return firsNum / secondNum;
     }
 

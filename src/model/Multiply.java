@@ -2,10 +2,10 @@ package model;
 
 public class Multiply {
 
-    private Integer firsNum;
-    private Integer secondNum;
+    private Double firsNum;
+    private Double secondNum;
 
-    public Multiply(Integer firsNum, Integer secondNum) {
+    public Multiply(Double firsNum, Double secondNum) {
         this.firsNum = firsNum;
         this.secondNum = secondNum;
     }
@@ -14,23 +14,23 @@ public class Multiply {
 
     }
 
-    public Integer getFirsNum() {
+    public Double getFirsNum() {
         return firsNum;
     }
 
-    public void setFirsNum(Integer firsNum) {
+    public void setFirsNum(Double firsNum) {
         this.firsNum = firsNum;
     }
 
-    public Integer getSecondNum() {
+    public Double getSecondNum() {
         return secondNum;
     }
 
-    public void setSecondNum(Integer secondNum) {
+    public void setSecondNum(Double secondNum) {
         this.secondNum = secondNum;
     }
 
-    public static Integer multiplyNum(Integer firsNum, Integer secondNum){
+    public static Double multiplyNum(Double firsNum, Double secondNum){
         return firsNum * secondNum;
     }
 
